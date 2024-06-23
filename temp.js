@@ -55,7 +55,7 @@ function farray(array) {
 }
 
 farray(array);
-console.log('if array is', array, 'flatArray is', flatArray);
+console.log('if array is', array, `\n`,'flatArray is', flatArray);
 
 
 // const arr = [1,2,3,3,3,4,5];
