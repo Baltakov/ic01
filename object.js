@@ -35,7 +35,7 @@ for(const i of arr){
         newArr.push(i)
     }
 }
-console.log(newArr);
+// console.log(newArr);
 
 
 const array = ["a", 5, ["3", 7, 8], "45", [1, 3, 7, 8]];
@@ -55,7 +55,7 @@ function farray(array) {
 }
 
 farray(array);
-console.log('if array is', array, `\n`,'flatArray is', flatArray);
+// console.log('if array is', array, `\n`,'flatArray is', flatArray);
 
 
 // const arr = [1,2,3,3,3,4,5];
@@ -231,22 +231,22 @@ console.log('if array is', array, `\n`,'flatArray is', flatArray);
 //     return a+b;
 // }
 
-// const playlist = {
-//  name,
-//  rating: 10,
-//  trackCount: 3,
-//  tracks: [1, 2, 3],
-//  getName(){
-//     console.log('это getName');
-//  },
-//  addTrack(track){
-//     this.tracks.push(track);
-//     this.trackCount = this.tracks.length
-//  }   
-// };
-// playlist.addTrack(4)
-// playlist.getName()
-// console.log(playlist);
+const playlist = {
+ name,
+ rating: 10,
+ trackCount: 3,
+ tracks: [1, 2, 3],
+ getName(){
+    console.log('это getName');
+ },
+ addTrack(track){
+    this.tracks.push(track);
+    this.trackCount = this.tracks.length
+ }   
+};
+playlist.addTrack(4)
+playlist.getName()
+console.log(playlist);
 
 // const friends = [
 //     {name: 'Mango', online: false},
@@ -313,10 +313,10 @@ const book = {
     b: 2,
     c: 3,
   };
-  console.log(obj.a);
-  console.log(obj['a']);
-  const key = 'a';
-  console.log(obj[key]);
+//   console.log(obj.a);
+//   console.log(obj['a']);
+//   const key = 'a';
+//   console.log(obj[key]);
 
 //   const x = Object.keys(obj);
 //   for (const key of x) {
@@ -344,16 +344,20 @@ const array1 = [
 //   console.log(obj3);
 const obj1 = array1[0];
 const obj1Keys = Object.keys(obj1)
-console.log(obj1Keys);
+// console.log(obj1Keys);
 
 const total = {};
 for (const key of obj1Keys) {
    total[key] = []; 
 }
-console.log(total);
+// console.log(total);
+
+
+
+
 
 const student = {
-    name: 'Alona',
+    name: 'Alyona',
     homeworks: [],
     getName(){
         console.log(this.name);
@@ -362,8 +366,10 @@ const student = {
         console.log(this.homeworks);
     },
     addHomework(subject, mark){
-        
+        const obj4 = {subject, mark}
+        this.homeworks.push(obj4)
+        console.log(this.homeworks);
     }
 };
-student.getName();
-student.getHomeworks();
+student.addHomework('js', 100);
+student.addHomework('html', 90);
