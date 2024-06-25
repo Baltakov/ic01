@@ -231,37 +231,37 @@ console.log('if array is', array, `\n`,'flatArray is', flatArray);
 //     return a+b;
 // }
 
-const playlist = {
- name,
- rating: 10,
- trackCount: 3,
- tracks: [1, 2, 3],
- getName(){
-    console.log('это getName');
- },
- addTrack(track){
-    this.tracks.push(track);
-    this.trackCount = this.tracks.length
- }   
-};
-playlist.addTrack(4)
-playlist.getName()
-console.log(playlist);
+// const playlist = {
+//  name,
+//  rating: 10,
+//  trackCount: 3,
+//  tracks: [1, 2, 3],
+//  getName(){
+//     console.log('это getName');
+//  },
+//  addTrack(track){
+//     this.tracks.push(track);
+//     this.trackCount = this.tracks.length
+//  }   
+// };
+// playlist.addTrack(4)
+// playlist.getName()
+// console.log(playlist);
 
-const friends = [
-    {name: 'Mango', online: false},
-    {name: 'Kiwi', online: true},
-    {name: 'Poly', online: true},
-    {name: 'Ajax', online: false},
-];
+// const friends = [
+//     {name: 'Mango', online: false},
+//     {name: 'Kiwi', online: true},
+//     {name: 'Poly', online: true},
+//     {name: 'Ajax', online: false},
+// ];
 
-console.table(friends);
+// console.table(friends);
 
-for (const friend of friends) {
-    console.log(friend);
-    friend.newprop = 555
-}
-console.log(friends);
+// for (const friend of friends) {
+//     console.log(friend);
+//     friend.newprop = 555
+// }
+// console.log(friends);
 
 // const getAllNames = function(allFriends){
 //     const names = [];
@@ -287,3 +287,83 @@ console.log(friends);
 // hotel.changeCapacity(200)
 // console.log(hotel.capacity);
 
+const book = {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["historical prose", "adventure"],
+    isPublic: false,
+    rating: 0,
+    data: {
+        a: 1,
+        b: {
+          test: 'test!!!',
+          test1: {
+            d: 10
+          }
+        },
+        c: 3
+    }
+  };
+//   console.log(book['data']['b']['test']);
+
+
+
+  const obj = {
+    a: 1,
+    b: 2,
+    c: 3,
+  };
+  console.log(obj.a);
+  console.log(obj['a']);
+  const key = 'a';
+  console.log(obj[key]);
+
+//   const x = Object.keys(obj);
+//   for (const key of x) {
+//     console.log(key);
+//   }
+//   for (const key in obj) {
+//    console.log(key);
+//   }
+
+const array1 = [
+    {
+        a: 1,
+        b: 2,
+        c: 3,
+      },
+      {
+        a: 4,
+        b: 5,
+        c: 6,
+      },
+  ];
+
+//   const obj3 = {};
+//   obj3.a = [];
+//   console.log(obj3);
+const obj1 = array1[0];
+const obj1Keys = Object.keys(obj1)
+console.log(obj1Keys);
+
+const total = {};
+for (const key of obj1Keys) {
+   total[key] = []; 
+}
+console.log(total);
+
+const student = {
+    name: 'Alona',
+    homeworks: [],
+    getName(){
+        console.log(this.name);
+    },
+    getHomeworks(){
+        console.log(this.homeworks);
+    },
+    addHomework(subject, mark){
+        
+    }
+};
+student.getName();
+student.getHomeworks();
