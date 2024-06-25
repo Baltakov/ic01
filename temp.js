@@ -207,27 +207,83 @@ console.log('if array is', array, `\n`,'flatArray is', flatArray);
 // })
 
 
-const numbers = [1,2,3,4,5];
-const numbers2 = [];
+// const numbers = [1,2,3,4,5];
+// const numbers2 = [];
 
-numbers.forEach(function(element){
-    numbers2.push(element*10)
-})
-    // console.log(numbers2);
+// numbers.forEach(function(element){
+//     numbers2.push(element*10)
+// })
+//     // console.log(numbers2);
 
 
 
-const add1 = function(a, b){
-    return a+b;
+// const add1 = function(a, b){
+//     return a+b;
+// }
+
+// const add2 = (a, b) => {   //
+//     return a+b;
+// }
+
+// const add3 = (a, b) => a+b
+
+// function add4(a, b){
+//     return a+b;
+// }
+
+const playlist = {
+ name,
+ rating: 10,
+ trackCount: 3,
+ tracks: [1, 2, 3],
+ getName(){
+    console.log('это getName');
+ },
+ addTrack(track){
+    this.tracks.push(track);
+    this.trackCount = this.tracks.length
+ }   
+};
+playlist.addTrack(4)
+playlist.getName()
+console.log(playlist);
+
+const friends = [
+    {name: 'Mango', online: false},
+    {name: 'Kiwi', online: true},
+    {name: 'Poly', online: true},
+    {name: 'Ajax', online: false},
+];
+
+console.table(friends);
+
+for (const friend of friends) {
+    console.log(friend);
+    friend.newprop = 555
 }
+console.log(friends);
 
-const add2 = (a, b) => {   //
-    return a+b;
-}
+// const getAllNames = function(allFriends){
+//     const names = [];
+//     for (const friend of allFriends) {
+//         console.log(friend.name);
+//         names.push(friend.name)
+//     }
+// }
+// console.log(getAllNames(friends));
 
-const add3 = (a, b) => a+b
-
-function add4(a, b){
-    return a+b;
-}
+// const hotel = {
+//     name: 'HOTEL',
+//     stars: 5,
+//     capacity: 100,
+//     showName(){
+//         console.log(this.name);
+//     },
+//     changeCapacity(value){
+//         this.capacity=value;
+//     },
+// };
+// hotel.showName();
+// hotel.changeCapacity(200)
+// console.log(hotel.capacity);
 
