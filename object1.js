@@ -237,7 +237,7 @@ const playlist = {
  trackCount: 3,
  tracks: [1, 2, 3],
  getName(){
-    console.log('это getName');
+    // console.log('это getName');
  },
  addTrack(track){
     this.tracks.push(track);
@@ -246,22 +246,46 @@ const playlist = {
 };
 playlist.addTrack(4)
 playlist.getName()
-console.log(playlist);
+// console.log(playlist);
 
-// const friends = [
-//     {name: 'Mango', online: false},
-//     {name: 'Kiwi', online: true},
-//     {name: 'Poly', online: true},
-//     {name: 'Ajax', online: false},
-// ];
+
+
+const friends = [
+    {name: 'Mango', online: false},
+    {name: 'Kiwi', online: true},
+    {name: 'Poly', online: true},
+    {name: 'Ajax', online: false},
+];
 
 // console.table(friends);
-
-// for (const friend of friends) {
-//     console.log(friend);
-//     friend.newprop = 555
-// }
+for (const friend of friends) {
+    // console.log(friend);
+    // friend.newprop = 555
+}
 // console.log(friends);
+
+const getOnlineFriends = function(allFriends){
+  const onlineFriends = [];
+  for (const friend of allFriends) {
+    // console.log(friend.online);
+    if(friend.online){
+      onlineFriends.push(friend)
+    }
+  }
+  return onlineFriends;
+}
+const getOfflineFriends = function(allFriends){
+  const offlineFriends = [];
+  for (const friend of allFriends) {
+    if(!friend.online){
+      offlineFriends.push(friend)
+    }
+  }
+  return offlineFriends;
+}
+// console.log(getOnlineFriends(friends));
+// console.log(getOfflineFriends(friends));
+
 
 // const getAllNames = function(allFriends){
 //     const names = [];
@@ -337,7 +361,13 @@ const array1 = [
         b: 5,
         c: 6,
       },
+      {
+        a: 7,
+        b: 8,
+        c: 9,
+      },
   ];
+  const total1 = {a: [1, 4, 7], b: [2, 5, 8], c: [3, 6, 9]}
 
 //   const obj3 = {};
 //   obj3.a = [];
@@ -369,7 +399,16 @@ const student = {
         const obj4 = {subject, mark}
         this.homeworks.push(obj4)
         console.log(this.homeworks);
-    }
-};
-student.addHomework('js', 100);
+    },
+    getSubjectCount(){
+      return this.homeworks.length;
+    },
+  };
+
+console.log("subjectCount: ", student.getSubjectCount());
 student.addHomework('html', 90);
+student.addHomework('css', 95);
+student.addHomework('js', 100);
+student.addHomework('react', 95);
+// console.log(student);
+console.log("subjectCount: ", student.getSubjectCount());
